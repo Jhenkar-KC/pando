@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1000276517747",
+    "firebase_url": "https://pando-86ae8-default-rtdb.firebaseio.com",
+    "project_id": "pando-86ae8",
+    "storage_bucket": "pando-86ae8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1000276517747:android:645ec001394c9bcf41db06",
+        "android_client_info": {
+          "package_name": "com.example.pando"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1000276517747-cp51ecp90noglrajmgnudd3q0dpdsboc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCNzrrNAivJUX9Er-7PNVFqp_GwuLJYsuk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1000276517747-cp51ecp90noglrajmgnudd3q0dpdsboc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
