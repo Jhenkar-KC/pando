@@ -14,13 +14,14 @@
       android:layout_marginStart="24dp"
       android:layout_marginTop="100dp"
       android:layout_marginEnd="24dp"
-      android:hint="Username"
+      android:hint="@string/username"
       android:inputType="textCapCharacters"
       android:selectAllOnFocus="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
+      app:layout_constraintTop_toTopOf="parent"
+      android:autofillHints="" />
 
   <EditText
       android:id="@+id/weight"
@@ -28,14 +29,17 @@
       android:layout_height="wrap_content"
       android:layout_marginStart="24dp"
       android:layout_marginEnd="24dp"
-      android:hint="Weight"
+
+      android:hint="@string/weight"
       android:imeOptions="actionDone"
       android:inputType="number"
       android:selectAllOnFocus="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/Dateofbirth" />
+      app:layout_constraintTop_toBottomOf="@+id/Dateofbirth"
+      tools:ignore="HardcodedText"
+      android:autofillHints="" />
 
   <androidx.appcompat.widget.AppCompatEditText
       android:id="@+id/Dateofbirth"
@@ -43,7 +47,7 @@
       android:layout_height="wrap_content"
       android:layout_marginStart="24dp"
       android:layout_marginEnd="24dp"
-      android:hint="Date of Birth"
+      android:hint="@string/date_of_birth"
       android:imeOptions="actionDone"
       android:inputType="date"
       android:selectAllOnFocus="true"
@@ -58,13 +62,14 @@
       android:layout_height="wrap_content"
       android:layout_marginStart="24dp"
       android:layout_marginEnd="24dp"
-      android:hint="Heart Rate"
+      android:hint="@string/heart_rate"
       android:inputType="number"
       android:selectAllOnFocus="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/last_period_date" />
+      app:layout_constraintTop_toBottomOf="@+id/last_period_date"
+      android:autofillHints="" />
 
   <EditText
       android:id="@+id/blood_pressure"
@@ -73,14 +78,15 @@
       android:layout_marginStart="24dp"
       android:layout_marginTop="4dp"
       android:layout_marginEnd="24dp"
-      android:hint="Blood Pressure"
+      android:hint="@string/blood_pressure"
       android:imeOptions="actionDone"
       android:inputType="number"
       android:selectAllOnFocus="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/heart_rate" />
+      app:layout_constraintTop_toBottomOf="@+id/heart_rate"
+      android:autofillHints="" />
 
   <EditText
       android:id="@+id/last_period_date"
@@ -89,14 +95,15 @@
       android:layout_marginStart="24dp"
       android:layout_marginTop="4dp"
       android:layout_marginEnd="24dp"
-      android:hint="Last Period Date"
+      android:hint="@string/last_period_date"
       android:imeOptions="actionDone"
       android:inputType="date"
       android:selectAllOnFocus="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/height" />
+      app:layout_constraintTop_toBottomOf="@+id/height"
+      android:autofillHints="" />
 
   <EditText
       android:id="@+id/height"
@@ -104,13 +111,14 @@
       android:layout_height="wrap_content"
       android:layout_marginStart="24dp"
       android:layout_marginEnd="24dp"
-      android:hint="Height"
+      android:hint="@string/height"
       android:inputType="number"
       android:selectAllOnFocus="true"
       app:layout_constraintEnd_toEndOf="parent"
       app:layout_constraintHorizontal_bias="0.0"
       app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toBottomOf="@+id/weight" />
+      app:layout_constraintTop_toBottomOf="@+id/weight"
+      android:autofillHints="" />
 
 
   <Button
@@ -121,9 +129,9 @@
       android:layout_marginStart="48dp"
       android:layout_marginEnd="48dp"
       android:background="@drawable/rounded_corner"
-      android:text="Submit Details"
+      android:text="@string/submit_details"
       android:textColor="#032E44"
-      android:textSize="24dp"
+      android:textSize="24sp"
       android:enabled="true"
       app:backgroundTint="#3C8BEB"
       app:layout_constraintBottom_toBottomOf="parent"

@@ -14,9 +14,9 @@
         android:layout_height="40dp"
         android:layout_marginTop="84dp"
         android:layout_marginEnd="24dp"
-        android:hint="New User,Register here"
+        android:hint="@string/new_user_register_here"
         android:selectAllOnFocus="true"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/reset_password"
         app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="@+id/reset_password"
@@ -30,8 +30,8 @@
         android:layout_marginBottom="104dp"
         android:background="@drawable/rounded_corner"
         android:enabled="true"
-        android:text="Register"
-        android:textSize="18dp"
+        android:text="@string/register"
+        android:textSize="18sp"
         android:textColor="#032E44"
         app:backgroundTint = "#3C8BEB"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -43,13 +43,14 @@
         android:id="@+id/passwordTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Password"
+        android:hint="@string/password"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="@+id/emailTextView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/emailTextView"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/emailTextView"
@@ -64,7 +65,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/forgot_password"
@@ -72,10 +74,10 @@
         android:layout_height="31dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="24dp"
-        android:hint="Forgot Password"
+        android:hint="@string/forgot_password"
         android:selectAllOnFocus="true"
         android:textColor="#032E44"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/sign_in_page"
         app:layout_constraintHorizontal_bias="0.458"
         app:layout_constraintStart_toStartOf="@+id/sign_in_page"
@@ -91,7 +93,7 @@
         android:enabled="true"
         android:textColor="#032E44"
         app:backgroundTint = "#3C8BEB"
-        android:text="Reset Password"
+        android:text="@string/reset_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
@@ -107,8 +109,8 @@
         android:enabled="true"
 
         app:backgroundTint = "#3C8BEB"
-        android:text="Sign In"
-        android:textSize="18dp"
+        android:text="@string/sign_in"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />

@@ -52,18 +52,18 @@ class UserHealthInfoAdapter  extends RecyclerView.Adapter<UserHealthInfoAdapter 
 
         TextView Name,LastPeriodDate,UpcomingPeriodDate,WarningPeriodDate,Height,Weight,BloodPressure,HeartRate,Age;
 
-        public UserHealthInfoViewHolder(@NonNull View itemView) {
-            super(itemView);
+        public UserHealthInfoViewHolder(@NonNull View textview) {
+            super(textview);
 
-            Name = itemView.findViewById(R.id.usernameCardView);
-            LastPeriodDate = itemView.findViewById(R.id.last_period_dateCardView);
-            UpcomingPeriodDate = itemView.findViewById(R.id.upcomingPeriodDateCardView);
-            WarningPeriodDate = itemView.findViewById(R.id.warningPeriodDateCardView);
-            Height = itemView.findViewById(R.id.heightCardView);
-            Weight = itemView.findViewById(R.id.weightCardView);
-            BloodPressure = itemView.findViewById(R.id.blood_pressureCardView);
-            HeartRate = itemView.findViewById(R.id.heart_rateCardView);
-            Age = itemView.findViewById(R.id.ageCardView);
+            Name = textview.findViewById(R.id.usernameCardView);
+            LastPeriodDate = textview.findViewById(R.id.last_period_dateCardView);
+            UpcomingPeriodDate = textview.findViewById(R.id.upcomingPeriodDateCardView);
+            WarningPeriodDate = textview.findViewById(R.id.warningPeriodDateCardView);
+            Height = textview.findViewById(R.id.heightCardView);
+            Weight = textview.findViewById(R.id.weightCardView);
+            BloodPressure = textview.findViewById(R.id.blood_pressureCardView);
+            HeartRate = textview.findViewById(R.id.heart_rateCardView);
+            Age = textview.findViewById(R.id.ageCardView);
         }
     }
 }

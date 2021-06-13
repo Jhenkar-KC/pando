@@ -7,7 +7,7 @@
     android:background="#FF53E0"
     android:padding="10dp"
     app:cardCornerRadius="10dp"
-    android:id="@+id/cardViewy"
+    android:id="@+id/cardView"
     app:cardElevation="200dp">
 
     <LinearLayout
@@ -23,7 +23,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Name"
+                android:text="@string/name"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -44,7 +44,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Age"
+                android:text="@string/age"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -66,7 +66,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Last Period Date"
+                android:text="@string/last_period_date"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -87,7 +87,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upcoming Period Date"
+                android:text="@string/upcoming_period_date"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -109,7 +109,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Warning Period Date"
+                android:text="@string/warning_period_date"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -129,7 +129,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Height"
+                android:text="@string/height"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -149,7 +149,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Weight"
+                android:text="@string/weight"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -169,7 +169,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Heart Rate"
+                android:text="@string/heart_rate"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView
@@ -189,7 +189,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Blood Pressure"
+                android:text="@string/blood_pressure"
                 android:textSize="20sp"
                 android:textStyle="bold" />
             <TextView

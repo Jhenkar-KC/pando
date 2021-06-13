@@ -12,13 +12,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-import com.google.firebase.database.annotations.NotNull;
 
 import java.util.ArrayList;
 
 public class InformationActivity extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
     FirebaseDatabase database;
     DatabaseReference myRef;
     private UserHealthInfoAdapter userHealthInfoAdapter;
@@ -30,7 +28,7 @@ public class InformationActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_information);
 
 
-        recyclerView = (RecyclerView) findViewById(R.id.recycledview);
+        RecyclerView recyclerView = findViewById(R.id.recycledview);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -44,7 +42,7 @@ public class InformationActivity extends AppCompatActivity {
         myRef = database.getReference().child("UserHealthInfo");
         myRef.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NotNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull  DataSnapshot snapshot) {
 
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()){
                     UserHealthInfo userHealthInfo = dataSnapshot.getValue(UserHealthInfo.class);
@@ -54,7 +52,7 @@ public class InformationActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(@NotNull DatabaseError error) {
+            public void onCancelled(@NonNull  DatabaseError error) {
 
             }
         });

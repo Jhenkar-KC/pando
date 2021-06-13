@@ -7,17 +7,6 @@
     android:background="#FF53E0"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/user_view2"
-        android:layout_width="171dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="414dp"
@@ -26,7 +15,8 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splashscreen" />
+        app:srcCompat="@drawable/splashscreen"
+        android:contentDescription="@string/todo" />
 
     <Button
         android:id="@+id/about_us"
@@ -37,8 +27,8 @@
         android:layout_marginEnd="48dp"
         android:layout_marginBottom="192dp"
         android:background="@drawable/rounded_corner"
-        android:text="About Us"
-        android:textSize="18dp"
+        android:text="@string/about_us"
+        android:textSize="18sp"
         android:textColor="#032E44"
         app:backgroundTint = "#3C8BEB"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,9 +46,9 @@
         android:layout_marginEnd="48dp"
         android:background="@drawable/rounded_corner"
         android:text="Login/Register"
-        android:textSize="18dp"
         android:textColor="#032E44"
-        app:backgroundTint = "#3C8BEB"
+        android:textSize="18sp"
+        app:backgroundTint="#3C8BEB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
