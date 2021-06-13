@@ -14,14 +14,7 @@ public class UserHealthInfo {
     private String blood_pressure;
 
 
-    public UserHealthInfo(String username, String date_of_birth, String height, String weight, String last_period_date, String heart_rate, String blood_pressure) {
-        this.username = username;
-        this.blood_pressure = blood_pressure;
-        this.last_period_date = last_period_date;
-        this.date_of_birth = date_of_birth;
-        this.height = height;
-        this.heart_rate = heart_rate;
-        this.weight = weight;
+    public UserHealthInfo() {
     }
 
     public String getUsername() {

@@ -7,13 +7,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +39,7 @@ public class DetailsActivity extends AppCompatActivity {
         date_of_birth_Button = findViewById(R.id.Dateofbirth);
         blood_pressure_Button = findViewById(R.id.blood_pressure);
         database = FirebaseDatabase.getInstance();
-        myRef = database.getReference("UserHealthInfo");
+        myRef = database.getReference().child("UserHealthInfo");
         userHealthInfoList = new ArrayList<>();
 
 
@@ -82,7 +79,7 @@ public class DetailsActivity extends AppCompatActivity {
             UserMap.put("BloodPressure", blood_pressure_string);
             UserMap.put("DateOfBirth", date_of_birth_string);
 
-            myRef.child("UserHealthInfo").child("UserHealthInfo").updateChildren(UserMap).addOnSuccessListener(new OnSuccessListener() {
+            myRef.push().setValue(UserMap).addOnSuccessListener(new OnSuccessListener() {
                 @Override
                 public void onSuccess(Object o) {
                     //getting a unique id using push().getKey() method

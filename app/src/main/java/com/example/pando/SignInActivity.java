@@ -37,10 +37,6 @@ public class SignInActivity extends AppCompatActivity {
 
             //Get Firebase auth instance
             auth = FirebaseAuth.getInstance();
-
-
-
-
             email_TV = (EditText) findViewById(R.id.emailTextView);
             password_TV = (EditText) findViewById(R.id.passwordTextView);
             register_button = (Button) findViewById(R.id.register_details);
