@@ -9,6 +9,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import java.util.ArrayList;
@@ -22,6 +24,8 @@ public class DetailsActivity extends AppCompatActivity {
     Button details_submit;
     FirebaseDatabase database;
     DatabaseReference myRef;
+    FirebaseUser CurrentUser;
+    String uid;
 
 
     @Override
@@ -40,6 +44,8 @@ public class DetailsActivity extends AppCompatActivity {
         blood_pressure_Button = findViewById(R.id.blood_pressure);
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference().child("UserHealthInfo");
+        CurrentUser = FirebaseAuth.getInstance().getCurrentUser();
+        uid = CurrentUser.getUid();
         userHealthInfoList = new ArrayList<>();
 
 
@@ -79,7 +85,7 @@ public class DetailsActivity extends AppCompatActivity {
             UserMap.put("BloodPressure", blood_pressure_string);
             UserMap.put("DateOfBirth", date_of_birth_string);
 
-            myRef.push().setValue(UserMap).addOnSuccessListener(new OnSuccessListener() {
+            myRef.child(uid).setValue(UserMap).addOnSuccessListener(new OnSuccessListener() {
                 @Override
                 public void onSuccess(Object o) {
                     //getting a unique id using push().getKey() method

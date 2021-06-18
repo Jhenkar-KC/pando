@@ -29,15 +29,15 @@ class UserHealthInfoAdapter  extends RecyclerView.Adapter<UserHealthInfoAdapter 
     public void onBindViewHolder(@NonNull UserHealthInfoViewHolder holder, int position) {
         UserHealthInfo userHealthInfo = UserHealthInfoList.get(position);
 
-        holder.BloodPressure.setText(userHealthInfo.getBlood_pressure());
-        holder.Age.setText(userHealthInfo.getDate_of_birth());
-        holder.HeartRate.setText(userHealthInfo.getHeart_rate());
+        holder.BloodPressure.setText(userHealthInfo.getBloodPressure());
+        holder.Age.setText(userHealthInfo.getDateOfBirth());
+        holder.HeartRate.setText(userHealthInfo.getHeartRate());
         holder.Height.setText(userHealthInfo.getHeight());
-        holder.LastPeriodDate.setText(userHealthInfo.getLast_period_date());
-        holder.UserName.setText(userHealthInfo.getUsername());
+        holder.LastPeriodDate.setText(userHealthInfo.getLastPeriodDate());
+        holder.UserName.setText(userHealthInfo.getUserName());
         holder.Weight.setText(userHealthInfo.getWeight());
-        holder.WarningPeriodDate.setText(userHealthInfo.getLast_period_date());
-        holder.UpcomingPeriodDate.setText(userHealthInfo.getLast_period_date());
+        holder.WarningPeriodDate.setText(userHealthInfo.getLastPeriodDate());
+        holder.UpcomingPeriodDate.setText(userHealthInfo.getLastPeriodDate());
     }
 
     @Override

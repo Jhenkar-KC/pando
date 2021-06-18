@@ -28,22 +28,22 @@ public class UserHealthInfo {
     public UserHealthInfo() {
 
     }
-    public String getBlood_pressure() {
+    public String getBloodPressure() {
         return BloodPressure;
     }
-    public String getDate_of_birth() {
+    public String getDateOfBirth() {
         return DateOfBirth;
     }
-    public String getHeart_rate() {
+    public String getHeartRate() {
         return HeartRate;
     }
     public String getHeight() {
         return Height;
     }
-    public String getLast_period_date() {
+    public String getLastPeriodDate() {
         return LastPeriodDate;
     }
-    public String getUsername() {
+    public String getUserName() {
         return UserName;
     }
     public String getWeight() {
