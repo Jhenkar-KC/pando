@@ -29,7 +29,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dummy"
+                android:text=""
                 android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
@@ -50,7 +50,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="000"
+                android:text=""
                 android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
@@ -72,7 +72,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00/00/0000"
+                android:text=""
                 android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
@@ -93,7 +93,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00/00/0000"
+                android:text=""
                 android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
@@ -115,7 +115,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00/00/0000"
+                android:text=""
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
                 android:padding="5dp"
@@ -135,7 +135,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00"
+                android:text=""
                 android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
@@ -155,7 +155,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00"
+                android:text=""
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
                 android:padding="5dp"
@@ -175,7 +175,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00"
+                android:text=""
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
@@ -195,7 +195,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="00"
+                android:text=""
                 android:padding="5dp"
                 android:layout_marginStart="20dp"
                 android:textSize="20sp"
