@@ -1,56 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="#FF53E0"
-    tools:context=".HomeActivity">
+    tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="414dp"
-        android:layout_height="374dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/splashscreen"
-        android:contentDescription="@string/todo" />
 
-    <Button
-        android:id="@+id/about_us"
-        android:layout_width="317dp"
-        android:layout_height="53dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="192dp"
-        android:background="@drawable/rounded_corner"
-        android:text="@string/about_us"
-        android:textSize="18sp"
-        android:textColor="#032E44"
-        app:backgroundTint = "#3C8BEB"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/home_page"
+            android:layout_width="317dp"
+            android:layout_height="53dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="88dp"
+            android:layout_marginEnd="48dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/home"
+            android:textSize="18sp"
+            app:backgroundTint ="#3C8BEB"
+            android:textColor="#032E44"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView4" />
 
-    <Button
-        android:id="@+id/login_register"
-        android:layout_width="317dp"
-        android:layout_height="53dp"
-        android:layout_gravity="start"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/rounded_corner"
-        android:text="Login/Register"
-        android:textColor="#032E44"
-        android:textSize="18sp"
-        app:backgroundTint="#3C8BEB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="410dp"
+            android:layout_height="368dp"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/splashscreen" />
+
+
+        <Button
+            android:id="@+id/about_us"
+            android:layout_width="317dp"
+            android:layout_height="53dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="48dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="84dp"
+            android:background="@drawable/rounded_corner"
+            android:text="@string/about_us"
+            android:textColor="#032E44"
+            android:textSize="18sp"
+            app:backgroundTint="#3C8BEB"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_page"
+            app:layout_constraintVertical_bias="0.67" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

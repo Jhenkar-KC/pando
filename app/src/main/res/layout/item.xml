@@ -5,10 +5,11 @@
     android:layout_height="300dp"
     android:layout_margin="10dp"
     android:background="#FF53E0"
-    android:padding="10dp"
     app:cardCornerRadius="10dp"
     android:id="@+id/cardView"
-    app:cardElevation="200dp">
+    >
+
+
 
     <LinearLayout
         android:layout_width="match_parent"

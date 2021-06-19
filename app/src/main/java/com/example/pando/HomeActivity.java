@@ -8,23 +8,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
-    Button login;
+    Button sign_in_button;
     Button about_us;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_home);
-
-        login = (Button) findViewById(R.id.login_register);
+        sign_in_button = (Button) findViewById(R.id.home_page);
         about_us = (Button) findViewById(R.id.about_us);
-        login.setOnClickListener(v -> {
-            Intent intent = new Intent(HomeActivity.this, SignInActivity.class);
+        sign_in_button.setOnClickListener(v -> {
+            Intent intent = new Intent(HomeActivity.this, MenuActivity.class);
             startActivity(intent);
         });
+
         about_us.setOnClickListener(v -> {
             Intent intent = new Intent(HomeActivity.this, AboutUsScrollingActivity.class);
             startActivity(intent);
         });
-
     }
+
 }

@@ -10,15 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 
 public class MainActivity extends AppCompatActivity {
-    Button sign_in_button;
+
+    Button login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        sign_in_button = (Button) findViewById(R.id.home_page);
-        sign_in_button.setOnClickListener(v -> {
-            Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+
+        login = (Button) findViewById(R.id.login_register);
+
+        login.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, SignInActivity.class);
             startActivity(intent);
         });
+
+
     }
 }

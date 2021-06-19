@@ -27,7 +27,6 @@ public class DetailsActivity extends AppCompatActivity {
     FirebaseUser CurrentUser;
     String uid;
 
-
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
