@@ -12,10 +12,6 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Pando">
-        <activity
-            android:name=".AboutUsScrollingActivity"
-            android:label="@string/title_activity_about_us_scrolling"
-            android:theme="@style/Theme.Pando.NoActionBar"></activity>
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".HomeActivity" />
         <activity

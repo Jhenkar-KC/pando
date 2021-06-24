@@ -49,4 +49,5 @@ public class UserHealthInfo {
     public String getWeight() {
         return Weight;
     }
+
 }

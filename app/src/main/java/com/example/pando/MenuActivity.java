@@ -65,10 +65,20 @@ public class MenuActivity extends AppCompatActivity {
             }
         };
 
-
         logout_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                Toast.makeText(MenuActivity.this, "You have logged out!", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MenuActivity.this, SignInActivity.class));
+                finish();
+            }
+        });
+
+
+        /*logout_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+           public void onClick(View v) {
                 if (user != null) {
                     user.delete()
                             .addOnCompleteListener(new OnCompleteListener<Void>() {
@@ -85,7 +95,7 @@ public class MenuActivity extends AppCompatActivity {
                             });
                 }
             }
-        });
+        });*/
 
     }
 }
