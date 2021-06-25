@@ -2,14 +2,10 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    android:layout_margin="10dp"
+    android:layout_height="wrap_content"
     android:background="#FF53E0"
-    app:cardCornerRadius="10dp"
     android:id="@+id/cardView"
     >
-
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -81,48 +77,7 @@
                 android:id="@+id/last_period_dateCardView"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/upcoming_period_date"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:padding="5dp"
-                android:layout_marginStart="20dp"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:id="@+id/upcomingPeriodDateCardView"/>
-        </LinearLayout>
 
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/warning_period_date"
-                android:textSize="20sp"
-                android:textStyle="bold" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=""
-                android:layout_marginStart="20dp"
-                android:textSize="20sp"
-                android:padding="5dp"
-                android:textStyle="bold"
-                android:id="@+id/warningPeriodDateCardView"/>
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

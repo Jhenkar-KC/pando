@@ -142,6 +142,7 @@
     <string name="name">Name</string>
     <string name="age">Age</string>
     <string name="last_period_date">Last Period Date</string>
+    <string name="OvulationDate">Ovulation Date</string>
     <string name="upcoming_period_date">Upcoming Period Date</string>
     <string name="warning_period_date">Warning Period Date</string>
     <string name="height">Height</string>

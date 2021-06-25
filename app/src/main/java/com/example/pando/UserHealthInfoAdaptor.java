@@ -36,8 +36,6 @@ class UserHealthInfoAdapter  extends RecyclerView.Adapter<UserHealthInfoAdapter 
         holder.LastPeriodDate.setText(userHealthInfo.getLastPeriodDate());
         holder.UserName.setText(userHealthInfo.getUserName());
         holder.Weight.setText(userHealthInfo.getWeight());
-        holder.WarningPeriodDate.setText(userHealthInfo.getLastPeriodDate());
-        holder.UpcomingPeriodDate.setText(userHealthInfo.getLastPeriodDate());
     }
 
     @Override
@@ -47,7 +45,7 @@ class UserHealthInfoAdapter  extends RecyclerView.Adapter<UserHealthInfoAdapter 
 
     public static class UserHealthInfoViewHolder extends RecyclerView.ViewHolder{
 
-        TextView UserName,LastPeriodDate,UpcomingPeriodDate,WarningPeriodDate,Height,Weight,BloodPressure,HeartRate,Age;
+        TextView UserName,LastPeriodDate,Height,Weight,BloodPressure,HeartRate,Age;
 
         public UserHealthInfoViewHolder(@NonNull View textview) {
             super(textview);
@@ -58,8 +56,6 @@ class UserHealthInfoAdapter  extends RecyclerView.Adapter<UserHealthInfoAdapter 
             LastPeriodDate = textview.findViewById(R.id.last_period_dateCardView);
             UserName = textview.findViewById(R.id.usernameCardView);
             Weight = textview.findViewById(R.id.weightCardView);
-            UpcomingPeriodDate = textview.findViewById(R.id.upcomingPeriodDateCardView);
-            WarningPeriodDate = textview.findViewById(R.id.warningPeriodDateCardView);
         }
     }
 }
