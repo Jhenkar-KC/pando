@@ -41,21 +41,30 @@
     <EditText
         android:id="@+id/passwordTextView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/custum_input"
+        android:drawableStart="@drawable/ic_lock"
+        android:drawablePadding="12dp"
+
         android:hint="Password"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/emailTextView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/emailTextView"
-        app:layout_constraintTop_toBottomOf="@+id/emailTextView"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/emailTextView" />
 
     <EditText
 
         android:id="@+id/emailTextView"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="24dp"
+        android:drawablePadding="12dp"
+        android:background="@drawable/custum_input"
+
         android:layout_marginTop="120dp"
+        android:drawableStart="@drawable/ic_email"
         android:layout_marginEnd="24dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
@@ -97,15 +106,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="8dp"
-        android:textColor="#032E44"
+        android:layout_marginTop="52dp"
         android:background="@drawable/rounded_corner"
         android:enabled="true"
-
-        app:backgroundTint = "#3C8BEB"
         android:text="@string/sign_in"
+
+        android:textColor="#032E44"
         android:textSize="18sp"
+        app:backgroundTint="#3C8BEB"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passwordTextView" />
 

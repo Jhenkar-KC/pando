@@ -1,23 +1,17 @@
 package com.example.pando;
 
-import android.content.Intent;
+import android.annotation.SuppressLint;
 import android.icu.text.DateFormat;
 import android.icu.text.SimpleDateFormat;
-import android.os.Build;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,13 +21,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.ParseException;
-import java.time.LocalDate;
-import java.time.ZoneOffset;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.HashMap;
 
 
 public class InformationActivity extends AppCompatActivity {
@@ -58,6 +48,7 @@ public class InformationActivity extends AppCompatActivity {
 
         UserHealthInfoList = new ArrayList<>();
         CurrentUser = FirebaseAuth.getInstance().getCurrentUser();
+        assert CurrentUser != null;
         uid = CurrentUser.getUid();
         userHealthInfoAdapter = new UserHealthInfoAdapter(this, UserHealthInfoList);
         recyclerView.setAdapter(userHealthInfoAdapter);
@@ -84,41 +75,38 @@ public class InformationActivity extends AppCompatActivity {
         });
 
         myRef.addValueEventListener(new ValueEventListener() {
-            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 for (DataSnapshot zoneSnapshot : dataSnapshot.getChildren()) {
-                    String PredictionDate = zoneSnapshot.child(uid).child("LastPeriodDate").getValue(String.class);
-                    String dtStart = PredictionDate;
-                    DateFormat sourceFormat = new SimpleDateFormat("dd/MM/yyyy");
-                    String UpComingPeriodDateAsString = dtStart;
+                    String dtStart = zoneSnapshot.child(uid).child("LastPeriodDate").getValue(String.class);
+                    @SuppressLint("SimpleDateFormat") DateFormat sourceFormat = new SimpleDateFormat("dd/MM/yyyy");
                     try {
-                        Date UpcomingperioddateDateFormat = sourceFormat.parse(UpComingPeriodDateAsString);
+                        Date UpcomingperioddateDateFormat = sourceFormat.parse(dtStart);
                         Calendar upcomingPeriodDateCalender = Calendar.getInstance();
                         upcomingPeriodDateCalender.setTime(UpcomingperioddateDateFormat);
                         // manipulate date
                         upcomingPeriodDateCalender.add(Calendar.DATE, 27);
                         // convert calendar to date
                         Date UpcomingPeriodmodifiedDate = upcomingPeriodDateCalender.getTime();
-                        DateFormat UpcomingPeriodDatedateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                        @SuppressLint("SimpleDateFormat") DateFormat UpcomingPeriodDatedateFormat = new SimpleDateFormat("dd-MM-yyyy");
                         String UpcomingperioddateStringFormat = UpcomingPeriodDatedateFormat.format(UpcomingPeriodmodifiedDate);
-
                         UpcomingPeriodDate.setText(UpcomingperioddateStringFormat);
 
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
                     try {
-                        Date OvulationDateFormat = sourceFormat.parse(UpComingPeriodDateAsString);
+                        Date OvulationDateFormat = sourceFormat.parse(dtStart);
                         Calendar OvulationDateCalender = Calendar.getInstance();
                         OvulationDateCalender.setTime(OvulationDateFormat);
                         // manipulate date
                         OvulationDateCalender.add(Calendar.DATE, 13);
                         // convert calendar to date
                         Date OvulationModifiedDate = OvulationDateCalender.getTime();
-                        DateFormat OvulationDatedateFormat = new SimpleDateFormat("dd-MM-yyyy");
+                        @SuppressLint("SimpleDateFormat") DateFormat OvulationDatedateFormat = new SimpleDateFormat("dd-MM-yyyy");
                         String OvulationdateStringFormat = OvulationDatedateFormat.format(OvulationModifiedDate);
                         OvulationDate.setText(OvulationdateStringFormat);
+
                     } catch (ParseException e) {
                         e.printStackTrace();
                     }
@@ -126,7 +114,7 @@ public class InformationActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onCancelled(DatabaseError databaseError) {
+            public void onCancelled(@NonNull DatabaseError databaseError) {
                 Log.w(TAG, "onCancelled", databaseError.toException());
             }
         });
